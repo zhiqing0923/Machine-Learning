@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+ml-env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
