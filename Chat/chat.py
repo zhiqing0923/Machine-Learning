@@ -4,7 +4,7 @@ import azure.identity
 import openai
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 API_HOST = os.getenv("API_HOST", "github")
 
