@@ -8,9 +8,8 @@ load_dotenv(override=True)
 
 API_HOST = os.getenv("API_HOST", "github")
 
-if API_HOST == "github":
-    client = openai.OpenAI(base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"])
-    MODEL_NAME = os.getenv("GITHUB_MODEL", "openai/gpt-4o")
+client = openai.OpenAI(base_url="https://models.github.ai/inference", api_key=os.environ["GITHUB_TOKEN"])
+MODEL_NAME = os.getenv("GITHUB_MODEL", "openai/gpt-4o")
 
 response = client.chat.completions.create(
     model=MODEL_NAME,
